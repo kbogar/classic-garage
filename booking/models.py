@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
+
 STATUS = ((0, 'Pending'), (1, 'Approved'))
 
 
@@ -23,10 +23,8 @@ class BookingModel(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     admin_approved = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['-created_on']
 
-class Meta:
-    ordering = ['-created_on']
-
-
-def __str__(self):
-    return str(self.name)
+    def __str__(self):
+        return str(self.name)
