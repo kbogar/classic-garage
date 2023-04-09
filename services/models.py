@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 
-class services(models.Model):
+class Service(models.Model):
     """
     This defines the Services Model, with a featured image,
     a title, brief description, and a price.
