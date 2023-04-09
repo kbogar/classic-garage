@@ -17,8 +17,8 @@ class BookingModel(models.Model):
     email = models.EmailField()
     created_on = models.DateField()
     updated_on = models.DateTimeField(auto_now=True)
-    services = models.ForeignKey(
-        Service, on_delete=models.CASCADE, related_name='services')
+    # services = models.ForeignKey(
+    #     Service, on_delete=models.CASCADE, related_name='services')
     message = models.TextField(max_length=400, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     admin_approved = models.BooleanField(default=False)
