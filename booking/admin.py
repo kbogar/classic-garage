@@ -1,5 +1,22 @@
 from django.contrib import admin
 from .models import BookingModel
 
-# Register your models here.
-admin.site.register(BookingModel)
+
+@admin.register(BookingModel)
+class BookingAdmin(admin.ModelAdmin):
+    """
+    It represents the Booking Model in the
+    Admin page.
+    """
+    list_display = (
+        'name', 'email', 'created_on',
+        'updated_on', 'message', 'service', 'status')
+    list_filter = ('admin_approved', 'created_on')
+    search_fields = ['name']
+    actions = ['approve_booking']
+
+    def approve_booking(self, request, queryset):
+        """
+        Handels approval action
+        """
+        queryset.update(approved=True)
