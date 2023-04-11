@@ -12,8 +12,8 @@ class BookingAdmin(admin.ModelAdmin):
     """
     list_display = (
         'name', 'email', 'created_on',
-        'updated_on', 'type', 'message', 'status')
-    list_filter = ('admin_approved', 'created_on', 'type')
+        'updated_on', 'service_type', 'message', 'status')
+    list_filter = ('admin_approved', 'created_on', 'service_type')
     search_fields = ['name']
     actions = ['approve_booking']
 

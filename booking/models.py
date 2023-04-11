@@ -17,7 +17,8 @@ class BookingModel(models.Model):
     email = models.EmailField()
     created_on = models.DateField()
     updated_on = models.DateTimeField(auto_now=True)
-    type = models.CharField(max_length=20, choices=TYPE_SERVICES, default='')
+    service_type = models.CharField(
+        max_length=15, choices=TYPE_SERVICES, default='OT')
     message = models.TextField(max_length=400, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     admin_approved = models.BooleanField(default=False)
