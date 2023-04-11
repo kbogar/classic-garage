@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from .constants import TYPE_SERVICES
 
 
 STATUS = ((0, 'Pending'), (1, 'Approved'))
@@ -16,6 +17,7 @@ class BookingModel(models.Model):
     email = models.EmailField()
     created_on = models.DateField()
     updated_on = models.DateTimeField(auto_now=True)
+    type = models.CharField(max_length=20, choices=TYPE_SERVICES, default='')
     message = models.TextField(max_length=400, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     admin_approved = models.BooleanField(default=False)
