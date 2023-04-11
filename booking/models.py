@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from services.models import Service
 
 
 STATUS = ((0, 'Pending'), (1, 'Approved'))
@@ -13,7 +12,6 @@ class BookingModel(models.Model):
     """
     customer = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='booking')
-    service = models.ForeignKey(Service, on_delete=models.CASCADE)
     name = models.CharField(max_length=40)
     email = models.EmailField()
     created_on = models.DateField()
