@@ -21,4 +21,4 @@ class BookingAdmin(admin.ModelAdmin):
         """
         Handels approval action
         """
-        queryset.update(approved=True)
+        queryset.update(status=1)
