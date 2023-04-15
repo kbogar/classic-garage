@@ -30,6 +30,12 @@
     width: 100%;
 }
 
+.hero-about {
+    background: url(https://res.cloudinary.com/dafz5mtkx/image/upload/v1681567923/Classic-Garage-Images/harley-davidson-rEPAjhzt7TY-unsplash_suauvy.jpg) no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
 .overlay {
     position: absolute;
     top: 0;

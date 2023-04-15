@@ -1,7 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>About page</h1>
+<div class="jumbotron jumbotron-fluid info-container">
+    <div class="container">
+        <h1>Classic Garage</h1>
+        <p>We are a family business, founded 20 years ago by Hans the head of the family, and two sons Andreas and Tom.
+            Since 2003 we customize motorcycles, develop new parts, and make customers from all of the world happy!
+            All of our bikes are unique because we like creating something new.</p>
+        <a class="btn btn-lg btn-secondary mt-3" role="button" href="{% url 'contact' %}">Contact Us</a>
+    </div>
+</div>
+<div class="container-fluid all-container hero-about mb-4">
+    <div class="overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbo">
+                
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
