@@ -1,7 +1,76 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>Our Services page</h1>
+<div class="jumbotron jumbotron-fluid info-container">
+    <div class="container">
+        <h1>Get In Touch With Us</h1>
+        <p>If you have any questions, design idea for your custom bike, or to service your bike, please fill in the
+            registration form and we will get back to you as soon as possible. (PS. Click on the Bike!)</p>
+        <a class="btn btn-lg btn-secondary mt-3" role="button" href="{% url 'book_service' %}"><i
+                class="fa-solid fa-motorcycle little-moto"></i></a>
+    </div>
+</div>
+<div class="card-columns">
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681567234/Classic-Garage-Images/pexels-rachel-claire-4857722_hvhkna.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Electrical Systems</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681569961/Classic-Garage-Images/pexels-rachel-claire-4577733_dkbok7.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Engine and Transmission System</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681567241/Classic-Garage-Images/pexels-rachel-claire-4825749_lx2ufd.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Steering System</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681569977/Classic-Garage-Images/pexels-rachel-claire-4577448_gfkoni.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Breaking System</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681570248/Classic-Garage-Images/pexels-gijs-coolen-2549941_utgxdd.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Tyre check or replace</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681570186/Classic-Garage-Images/dan-burton-dvM7a-dIXFc-unsplash_ivufrk.jpg"
+                alt="Card image" style="width:60%">
+            <h4 class="card-title">Other</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
