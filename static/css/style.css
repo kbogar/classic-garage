@@ -24,7 +24,7 @@
 }
 
 .hero {
-    background: url(../images/pexels-kelly-2519372.jpg) no-repeat;
+    background: url(https://res.cloudinary.com/dafz5mtkx/image/upload/v1681543944/Classic-Garage-Images/pexels-kelly-2519372_celrzg.jpg) no-repeat;
     background-size: cover;
     height: 800px;
     width: 100%;
@@ -39,7 +39,7 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-.jumbotron {
+.jumbo {
     max-width: 36rem;
     background-color: transparent;
     margin-bottom: 4rem;
@@ -48,4 +48,15 @@
 .hero-p {
     font-size: 1.2em;
     line-height: 1.1;
+}
+
+/* get in touch section */
+
+.info-container {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.little-moto {
+    font-size: 2em;
 }
