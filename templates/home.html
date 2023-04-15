@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container-fluid all-container hero mb-4">
+    <div class="overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron">
+                <div class="container text-light">
+                    <h1 class="mb-4">Handcrafted Custom Bikes</h1>
+                    <p class="hero-p mb-3">Classic Garage is a Malmo based custom motorcycle shop.
+                        We build bikes focused on customer personal style and wishes, with high quality and unique design.
+                    </p>
+                        <a class="btn btn-lg btn-secondary mt-3" role="button" href="{% url 'contact' %}">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h1>Home page</h1>
 
 {% endblock %}
