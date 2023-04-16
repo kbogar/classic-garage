@@ -28,12 +28,13 @@ class Contact(FormView):
     """
     template_name = 'contact.html'
     form_class = CustomContactForm
-    succes_url = '/contact/'
+    success_url = '/contact_success/'
 
     def form_valid(self, form):
-        form.object()
-        messages.success(
-            self.request,
-            "Thank you for reaching out! We value your inquiry \
-            and will respond as soon as we can.")
-        return HttpResponseRedirect(self.request.path_info)
+        form = form.save(commit=False)
+        form.save()
+        return super().form_valid(form)
+
+
+class ContactSucces(TemplateView):
+    template_name = 'contact_success.html'
