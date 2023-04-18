@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .forms import CustomContactForm
 from django.views.generic.edit import FormView
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 
 
@@ -41,3 +42,7 @@ class Contact(FormView):
 
 class ContactSucces(TemplateView):
     template_name = 'contact_success.html'
+
+
+def login_user(request):
+    return render(request, 'account/login.html', {})
