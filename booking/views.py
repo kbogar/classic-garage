@@ -33,6 +33,9 @@ class Contact(FormView):
     def form_valid(self, form):
         form = form.save(commit=False)
         form.save()
+        messages.success(
+            self.request,
+            "Thank you for reaching out to us. We'll be in touch soon.")
         return super().form_valid(form)
 
 
