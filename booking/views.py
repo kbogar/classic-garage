@@ -4,6 +4,7 @@ from .forms import CustomContactForm
 from django.views.generic.edit import FormView
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 
 
@@ -53,7 +54,7 @@ def login_user(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.success(request, "There was \
+            messages.error(request, "There was \
              an error loggin in, Try again.")
             return redirect('login')
 
@@ -65,3 +66,21 @@ def logout_user(request):
     logout(request)
     messages.success(request, "You have been successfully logged out.")
     return redirect('home')
+
+
+def register_user(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, "You have been Registered Successful!")
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'account/signup.html', {
+        'form': form,
+    })
