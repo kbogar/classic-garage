@@ -12,7 +12,7 @@ class BookingModel(models.Model):
     for the customer to make a booking.
     """
     customer = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='booking')
+        User, on_delete=models.CASCADE, related_name='booking', null=True)
     name = models.CharField(max_length=40)
     email = models.EmailField()
     created_on = models.DateField()
