@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 from .views import Home, About, OurServices, BookService, Contact
-from .views import ContactSucces
 
 
 urlpatterns = [
@@ -10,8 +9,4 @@ urlpatterns = [
     path('our_services/', OurServices.as_view(), name='our_services'),
     path('book_service/', BookService.as_view(), name='book_service'),
     path('contact/', Contact.as_view(), name='contact'),
-    path('contact_success/', ContactSucces.as_view(), name='contact_success'),
-    # path('login_user', views.login_user, name='login'),
-    # path('logout_user', views.logout_user, name='logout'),
-    # path('register_user', views.register_user, name='signup'),
 ]
