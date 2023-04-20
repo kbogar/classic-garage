@@ -19,10 +19,6 @@ class OurServices(TemplateView):
     template_name = 'our_services.html'
 
 
-# class BookService(TemplateView):
-#     template_name = 'book_service.html'
-
-
 class BookService(CreateView):
     """
     Handels the booking form page. After submitting the
