@@ -72,6 +72,19 @@ class UpdateBooking(UpdateView):
         return super().form_valid(form)
 
 
+class DeleteBooking(DeleteView):
+    """
+    Delete booking if the user no longer need it
+    """
+    model = BookingModel
+    template_name = 'delete_bookings.html'
+    success_url = '/my_bookings/'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Booking was successfully deleted!')
+        return super().delete(request, *args, **kwargs)
+
+
 class Contact(FormView):
     """
     Handels the Contact Page, with a message.

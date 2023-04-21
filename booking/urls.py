@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from .views import Home, About, OurServices, BookService,\
-     Contact, MyBooking, UpdateBooking
+     Contact, MyBooking, UpdateBooking, DeleteBooking
 
 
 urlpatterns = [
@@ -12,5 +12,7 @@ urlpatterns = [
     path('my_bookings/', MyBooking.as_view(), name='my_bookings'),
     path('update_bookings/<int:pk>', UpdateBooking.as_view(),
          name='update_bookings'),
+    path('delete_bookings/<int:pk>',
+         DeleteBooking.as_view(), name='delete_bookings'),
     path('contact/', Contact.as_view(), name='contact'),
 ]
