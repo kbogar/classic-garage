@@ -7,28 +7,33 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2>Your Bookings</h2>
+                <h1>Your Bookings</h1>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
         </div>
     </div>
+    <br>
     <!-- if the user has no bookings -->
     {% if not bookings %}
-    <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5">
-            <p><strong>Currently, you do not have any booked services.</strong></p>
-            <a href="{% url 'book_service' %}" role="button"><button class="btn btn-info">Book a Service</button></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>You have not booked any services yet.</p>
+                <a href="{% url 'book_service' %}" role="button"><button class="btn btn-lg btn-success">Book a
+                        Service</button></a>
+            </div>
         </div>
     </div>
     <!-- display users bookings -->
     {% else %}
-    <div class="row text-center">
+    <div class="container pt-3">
         {% for booking in bookings %}
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-row">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body bg-light">
 
                     <!-- if admin approves the booking -->
-                    {% if appointment.status == 1 %}
+                    {% if booking.status == 1 %}
                     <h3 class="card-title">Approved
                     </h3>
                     {% else %}
@@ -54,7 +59,7 @@
 
                     <!-- user can update or delete bookings -->
                     {% if booking.status == 0 %}
-                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="#" class="btn btn-success">Update</a>
                     <a href="#" class="btn btn-danger">Cancel</a>
                     {% endif %}
                 </div>

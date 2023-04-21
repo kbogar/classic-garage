@@ -41,12 +41,12 @@ class BookService(CreateView):
 
 class MyBooking(generic.ListView):
     """
-    Handels my bookings page, with the users
+    Handels my bookings page, with the logged in users
     booking data.
     """
     model = BookingModel
     template_name = 'my_bookings.html'
-    paginate_by = 6
+    paginate_by = 3
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -56,9 +56,6 @@ class MyBooking(generic.ListView):
     def get_queryset(self):
         user = self.request.user
         return BookingModel.objects.filter(customer=user)
-    # def get_queryset(self):
-    #     return BookingModel.objects.filter(
-    #         customer=self.request.user).order_by('created_on')
 
 
 class Contact(FormView):
