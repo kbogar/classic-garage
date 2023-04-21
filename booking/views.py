@@ -31,7 +31,7 @@ class BookService(CreateView):
     success_url = '/my_bookings/'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.customer = self.request.user
         form.save()
         messages.success(
             self.request,
@@ -53,8 +53,12 @@ class MyBooking(generic.ListView):
         context['bookings'] = context['object_list']
         return context
 
+    def get_queryset(self):
+        user = self.request.user
+        return BookingModel.objects.filter(customer=user)
     # def get_queryset(self):
-    #     return BookingModel.objects.filter(customer=self.request.user)
+    #     return BookingModel.objects.filter(
+    #         customer=self.request.user).order_by('created_on')
 
 
 class Contact(FormView):
