@@ -3,6 +3,8 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!-- user have to sign in before he can book a service -->
+{% if user.is_authenticated %}
 <div class="jumbotron jumbotron-fluid info-container">
     <div class="container">
         <h1>Book a Service</h1>
@@ -19,5 +21,15 @@
         </div>
     </div>
 </div>
-
+{% else %}
+<div class="jumbotron jumbotron-fluid info-container">
+    <div class="container">
+        <div class="alert col-10 offset-1 col-md-8 offset-md-2 mt-3 p-3" role="alert">
+            <h3 class="text-center">Please<a href="{% url 'account_login' %}"> Log In</a> or <a
+                    href="{% url 'account_signup' %}">Register</a> to book a service.</h3>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
