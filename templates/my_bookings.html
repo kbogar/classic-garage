@@ -59,7 +59,7 @@
 
                     <!-- user can update or delete bookings -->
                     {% if booking.status == 0 %}
-                    <a href="#" class="btn btn-success">Update</a>
+                    <a href="{% url 'update_bookings' pk=booking.id %}" class="btn btn-success">Update</a>
                     <a href="#" class="btn btn-danger">Cancel</a>
                     {% endif %}
                 </div>

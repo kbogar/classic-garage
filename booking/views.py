@@ -58,6 +58,20 @@ class MyBooking(generic.ListView):
         return BookingModel.objects.filter(customer=user)
 
 
+class UpdateBooking(UpdateView):
+    """
+    If the user wants to update his booking details
+    """
+    model = BookingModel
+    template_name = 'update_bookings.html'
+    form_class = BookingModelForm
+    success_url = '/my_bookings/'
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Booking successfully updated!')
+        return super().form_valid(form)
+
+
 class Contact(FormView):
     """
     Handels the Contact Page, with a message.
