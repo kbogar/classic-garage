@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
+from django.views import generic
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .forms import CustomContactForm, BookingModelForm
+from .models import BookingModel
 from django.views.generic.edit import FormView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -37,8 +39,22 @@ class BookService(CreateView):
         return super().form_valid(form)
 
 
-class UpdateBooking(TemplateView):
+class MyBooking(generic.ListView):
+    """
+    Handels my bookings page, with the users
+    booking data.
+    """
+    model = BookingModel
     template_name = 'my_bookings.html'
+    paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['bookings'] = context['object_list']
+        return context
+
+    # def get_queryset(self):
+    #     return BookingModel.objects.filter(customer=self.request.user)
 
 
 class Contact(FormView):

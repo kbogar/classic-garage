@@ -1,8 +1,65 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% load crispy_forms_tags %}
 
-<h1>My bookings</h1>
+<!-- My bookings Page -->
+<div class="jumbotron jumbotron-fluid info-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Your Bookings</h2>
+            </div>
+        </div>
+    </div>
+    <!-- if the user has no bookings -->
+    {% if not bookings %}
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 mt-5 my-5 p-5">
+            <p><strong>Currently, you do not have any booked services.</strong></p>
+            <a href="{% url 'book_service' %}" role="button"><button class="btn btn-info">Book a Service</button></a>
+        </div>
+    </div>
+    <!-- display users bookings -->
+    {% else %}
+    <div class="row text-center">
+        {% for booking in bookings %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <!-- if admin approves the booking -->
+                    {% if appointment.status == 1 %}
+                    <h3 class="card-title">Approved
+                    </h3>
+                    {% else %}
+                    <!-- if not this is a message -->
+                    <h3 class="card-title">Pending
+                    </h3>
+                    {% endif %}
+
+                    <hr>
+                    <p>Name:
+                        <strong>{{ booking.name }}</strong>
+                    </p>
+                    <p>Requested Date:
+                        <strong>{{ booking.created_on }}</strong>
+                    </p>
+                    <p>Treatments:
+                        <strong>{{ booking.service_type }}</strong>
+                    </p>
+
+
+                    <!-- user can update or delete bookings -->
+                    {% if booking.status == 0 %}
+                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="#" class="btn btn-danger">Cancel</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
 
 {% endblock %}
