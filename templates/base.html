@@ -20,6 +20,7 @@
 
 <body>
     <header>
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <a class="navbar-brand" href="{% url 'home' %}"><img
                     src="https://res.cloudinary.com/dafz5mtkx/image/upload/v1681543960/Classic-Garage-Images/logo_upacx2.png"
@@ -38,6 +39,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'our_services' %}">Our Services</a>
                     </li>
+                    <!-- when the user is logged in the my bookings link and their name appear -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'my_bookings' %}"><strong>My Bookings</strong></a>
@@ -60,7 +62,7 @@
             </div>
         </nav>
     </header>
-    <!-- display messages -->
+    <!-- display alert messages -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 hide-message">
@@ -83,24 +85,26 @@
 
         {% endblock %}
     </main>
+    <!-- Footer -->
     <footer class="bg-dark text-center text-white">
         <div class="container p-4 pb-0">
+            <h2>Contact Us</h2>
+            <p>Tel: 0123456789</p>
             <!-- Social media -->
             <section class="mb-4">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com" target="_blank"
+                    role="button" rel="noopener" aria-label="Visit our Facebook page (Opens in a new tab)"><i
                         class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com" target="_blank"
+                    rel="noopener" role="button" aria-label="Visit our Twitter page (Opens in a new tab)"><i
                         class="fab fa-twitter"></i></a>
 
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
-
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com" target="_blank"
+                    rel="noopener" role="button" aria-label="Visit our Instagram page (Opens in a new tab)"><i
                         class="fab fa-instagram"></i></a>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

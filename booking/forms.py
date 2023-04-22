@@ -23,6 +23,9 @@ class BookingModelForm(forms.ModelForm):
                   'created_on',
                   'service_type',
                   'message',)
+        labels = {
+            'created_on': 'Request date',
+        }
         widgets = {
             'created_on': DateInput(attrs={
                 'min': datetime.date.today()+datetime.timedelta(days=3),

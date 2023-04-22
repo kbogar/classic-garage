@@ -1,3 +1,6 @@
+"""
+Defines the constants for the service types
+"""
 OTHER = 'OT'
 ELECTRICAL = 'EL'
 ENGINE = 'ENG'
