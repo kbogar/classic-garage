@@ -1,5 +1,9 @@
 
 /* navbar */
+.nav-custom {
+    color: white;
+}
+
 .navbar-collapse {
     text-align: center;
 }
@@ -44,6 +48,13 @@
     width: 100%;
 }
 
+.hero-our {
+    background: url(https://res.cloudinary.com/dafz5mtkx/image/upload/v1681818235/Classic-Garage-Images/petr-magera-dFB979zsQ0A-unsplash_ac4j54.jpg) no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -69,8 +80,13 @@
 .info-container {
     font-size: 1.2em;
     text-align: center;
+    background-color: white;
 }
 
 .little-moto {
     font-size: 2em;
+}
+
+.card-custom {
+    background-color: #351a1a;
 }
