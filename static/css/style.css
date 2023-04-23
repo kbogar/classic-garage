@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
 
-/* navbar */
-.nav-custom {
-    color: white;
+body {
+    font-family: 'Prompt', sans-serif;
 }
 
 .navbar-collapse {
@@ -85,8 +85,4 @@
 
 .little-moto {
     font-size: 2em;
-}
-
-.card-custom {
-    background-color: #351a1a;
 }
