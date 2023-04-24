@@ -16,6 +16,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn btn-lg btn-danger mt-3" type="submit" value="Delete">Delete</button>
+                <a href="{% url 'my_bookings' %}" class="btn btn-lg btn-success mt-3">Cancel</a>
             </form>
         </div>
     </div>
