@@ -3,6 +3,8 @@ Classic Garage is a full-stack, responsive, mobile-first website built for ficti
 
 The business offers its customers an easy way to access its services through an online booking system. Users can create an account, view, edit, and delete bookings, and learn more about the business and its services.
 
+[Link to the website](https://classic-garage.herokuapp.com/)
+
 ![](/documentation/mockup.png)
 
 # Table of Contents
@@ -11,6 +13,10 @@ The business offers its customers an easy way to access its services through an 
 * [User Experience (UX)](#user-experience-ux)
     * [Site Goals](#site-goals)
     * [User Stories](#user-stories)
+    * [Wireframes](#wireframes)
+    * [Color Scheme](#color-scheme)
+    * [Typography](#typography)
+    * [Icons](#icons)
 
 # Entity Relationship Model
 Before beginning this project, I researched the data models necessary to construct the desired application. This research included defining the entities and the relationships between them, creating a comprehensive list of fields and data points, and outlining the necessary actions for the application to function correctly. With this information in hand, I was able to construct the necessary models for the project and ensure that the application would be able to meet its goals.
@@ -18,12 +24,14 @@ Before beginning this project, I researched the data models necessary to constru
 ![](/documentation/erm.png)
 # Agile Methodology
 This project was developed using the agile methodology and version control on GitHub. Tasks were tracked and managed through Github's issue-tracking system, allowing for rapid progress and continued progress tracking.
-## User Stories Board
+## [User Stories Board](https://github.com/users/kbogar/projects/4/views/1)
 ![](/documentation/userstories.png)
 
-## Issues
+## [Issues](https://github.com/kbogar/classic-garage/issues)
 ![](/documentation/issues.png)
 I found the Agile Methodology to be an extremely useful tool for organizing and managing the development of my project. By breaking down the project into smaller tasks, I was able to better track my progress and ensure that I stayed on schedule. Additionally, I was able to make adjustments to my plan as needed, allowing me to make the most of my time and resources. The satisfaction of ticking off a completed User Story and placing it in the 'Done' column was also a great motivator.
+
+[Back to top](#table-of-contents)
 
 # User Experience (UX)
 ## Site Goals
@@ -56,11 +64,54 @@ Every User Story was recorded in GitHub Issues, and the goal is to establish wha
 - As a Developer I can add an empty default choice so that the user is alerted when trying to submit a booking without selecting the type.
 - As a Developer I can add validations on the date field so that users can only pick days 3 days in advance.
 
-# Wireframes
+[Back to top](#table-of-contents)
 
-# Color Scheme
+## Wireframes
+Wireframes were initially created on paper to help deciding the most important aspects of the website, and getting a sense of the overall website. Afterward, Balsamiq was utilized to create wireframes with a more accurate representation of the design.
 
-# Fonts Used
+The wireframe for this project could differ from the final design due to modifications made during the development process.
+
+<details>
+
+<summary>Wireframes</summary>
+
+**Mobile Wireframes Home, About, Our Services**
+
+![Mobile Home, About, Our Services](/documentation/mobile_wireframe1.png)
+
+**Mobile Wireframes Register, Login**
+
+![Mobile Register, Login](/documentation/mobile_vireframe2.png)
+
+**Desktop Wireframes Home, About**
+
+![Desktop Home, About](/documentation/desktop_wireframe1.png)
+
+**Desktop Wireframes Our Services, Register**
+
+![Desktop Our Services, Register](/documentation/desktop_wireframe2.png)
+
+**Desktop Wireframes Login, My Bookings**
+
+![Desktop Login, My Bookings](/documentation/desktop_wireframe3.png)
+
+</details>
+
+
+___
+
+## Color Scheme
+Using [ColorSpace](https://mycolor.space/), I decided to use Random Shades palette for this website, to achieve a simple, understated look with minimalistic design elements.
+
+![](/documentation/ColorSpace.png)
+
+## Typography
+[Google Fonts](https://fonts.google.com/) Prompt and Sans Serif were used to create this website
+
+## Icons
+[Font Awesome](https://fontawesome.com/) social media icons were used for the Footer and throughout the website.
+
+[Back to top](#table-of-contents)
 
 # Features
 ## Existing Features
