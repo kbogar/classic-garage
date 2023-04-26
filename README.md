@@ -118,13 +118,111 @@ Using [ColorSpace](https://mycolor.space/), I decided to use Random Shades palet
 
 ### Header & Navigation
 
+Logo with a link which brings the user to the home page. Navigation menu consisting of links to other pages, available to both visitors and logged-in users, that are optimized for various devices.
+
+<details>
+
+<summary>Click to view screenshots of Navigation features</summary>
+
+**Navigation closed Mobile**
+
+![Nav mobile closed](/documentation/navbar2.png)
+
+**Navigation open Mobile**
+
+![Nav mobile open](/documentation/navbar2a.png)
+
+**Navigation open logged in Mobile**
+
+![Nav mobile logged in open](/documentation/navbar_signedin2.png)
+
+**Navigation Desktop**
+
+![Nav desktop](/documentation/navbar1.png)
+
+**Navigation logged in Desktop**
+
+![Nav desktop logged in](/documentation/navbar_signedin.png)
+
+</details>
+
+<br>
+
 ### Footer
+All the users will have access to the footer section of the page. They can find contact information with the phone number, and social media links.
+
+<details>
+
+<summary>Click to view screenshots of Footer features</summary>
+
+**Footer Mobile**
+
+![Footer Mobile](/documentation/footer2.png)
+
+**Footer Desktop**
+
+![Footer Desktop](/documentation/footer1.png)
+
+</details>
+
+<br>
 
 ### Home Page
+The homepage welcomes the user and there are two sections, the first with a brief description of the business, a background image, and a button that takes the user directly to the contact page, and the second section with a button that takes the user to the register page.
+
+<details>
+
+<summary>Click to view screenshots of the Home Page</summary>
+
+**Home Page Mobile**
+
+![Home Page Mobile](/documentation/homepage_mobile.png)
+
+**Home Page Desktop**
+
+![Home Page Desktop](/documentation/homepage.png)
+
+</details>
+
+<br>
 
 ### About Page
+The About page provides more information about the family business, and it's reachable via the About link in the navigation bar. There are two sections, the first with a background image, the company name, and the meme, and the second section with information about the business and a Contact Us button.
+
+<details>
+
+<summary>Click to view screenshots of the About Page</summary>
+
+**About Page Mobile**
+
+![About Page Mobile](/documentation/aboutpage_mobile.png)
+
+**About Page Desktop**
+
+![About Page Desktop](/documentation/aboutpage.png)
+
+</details>
+
+<br>
 
 ### Our Services Page
+The Our Services page it's reachable via the Our Services link in the navigation bar. There are two sections, the first with a background image, and a description of what kind of services provide the business. The second section with a type of service, an image, a description, and a button to Book a Service, and a Contact Us button for custom projects.
+
+<details>
+
+<summary>Click to view screenshots of the Our Services Page</summary>
+
+**Our Services Page Mobile**
+
+![Our Services Page Mobile](/documentation/ourservicespage_mobile.png)
+
+**Our Services Page Desktop**
+
+![Our Services Page Desktop](/documentation/ourservicespage.png)
+
+</details>
+
+<br>
 
 ### Registration
 
