@@ -277,12 +277,108 @@ The Contact Us page is reachable via the Home, About, and Our Services page. Log
 <br>
 
 ### Login
+Returning users can access the login form through the navigation bar or through the Our Services page if the user wants to book a service.
+- The login form includes a message and a link to Sign Up/Register form for the users who have not yet registered.
+- It uses django-allauth to provide all the settings for user authentication and includes the fields below;
+    - username
+    - password
+
+- The form is submitted via Sign In button at the bottom of the form.
+- When the user clicks on the sign-in button, they are redirected to the Home page and an alert message is displayed on the screen giving the user feedback about their login.
+
+<details>
+
+<summary>Click to view screenshots of Login</summary>
+
+**Login page**
+
+![Login page](/documentation/login_mobile.png)
+
+**Login Message**
+
+![Login Message](/documentation/signin_message.png)
+
+</details>
+
+<br>
 
 ### Logout
+The logged-in users can end their session and logout/signout.
+- The logout form can only be accessed from the navigation bar.
+- A confirmation message appears if they want to sign out.
+- When they click on Sign Out button, they are redirected to the Home page and an alert message is displayed on the screen giving the user feedback on their signout.
 
-### Book Service
+<details>
+
+<summary>Click to view screenshots of Logout</summary>
+
+**Logout page**
+
+![Logout page](/documentation/logout.png)
+
+**Logout Message**
+
+![Logout Message](/documentation/signout_message.png)
+
+</details>
+
+<br>
+
+### Book a Service
+- Guest users will not be able to book service, they will be asked to log in/register first.
+- The book service form can be accessed on Our Services page.
+- A logged-in user can access a book service form. They can fill out the form by inputting their details;
+    - name
+    - email
+    - request date
+    - service type
+    - message
+
+- The form is submitted via Send Request button at the bottom of the form.
+- After submitting the form successfully, an alert message is displayed on the screen giving the user feedback about their booking.
+
+<details>
+
+<summary>Click to view screenshots of a Booking</summary>
+
+**Guest user**
+
+![Guest user](/documentation/guestuser.png)
+
+**Booking page**
+
+![Booking page](/documentation/bookservice_mobile.png)
+
+**Booking Message**
+
+![Booking Message](/documentation/booking_message.png)
+
+</details>
+
+<br>
 
 ### Profile/My Bookings
+The website gives the user the functionality to create, view, update, and delete bookings. All bookings are listed on the My Bookings page.
+- The user must be logged in to access the My Bookings page on the navigation bar.
+- A logged-in user who has not yet created a booking will have a message with information to add a booking.
+- When a user book a service, his request is still pending, so he can still update or delete his booking.
+- Admin-approved bookings cant be updated or deleted by users.
+
+<details>
+
+<summary>Click to view screenshots of My Bookings page</summary>
+
+**Not Booked yet**
+
+![No Booking](/documentation/notbookedyet.png)
+
+**My Bookings page**
+
+![My Bookings page](/documentation/mybookings_mobile.png)
+
+</details>
+
+<br>
 
 ### Update Booking
 
