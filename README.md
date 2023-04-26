@@ -225,6 +225,56 @@ The Our Services page it's reachable via the Our Services link in the navigation
 <br>
 
 ### Registration
+The website has the functionality for a user to register and create an account. The registration form can be accessed through the navigation bar, or through the Home Page second section, and Our Services Page book services section.
+- The Register Form includes a message if the user already have an account then there is a sign in link also
+- It uses django-allauth to provide all the settings for user authentication and includes the fields below.
+
+    - Username
+    - email address
+    - password
+    - password again
+
+- The form is submitted via Register button at the bottom of the form.
+- After the form has been submitted the user is redirected to the Home page and an alert message is displayed on the screen giving the user feedback about their registration.
+
+<details>
+
+<summary>Click to view screenshots of Registration</summary>
+
+**Registration Page**
+
+![Registration Page](/documentation/register.png)
+
+**Register Message**
+
+![Register Message](/documentation/register_message.png)
+
+</details>
+
+<br>
+
+### Contact Us
+The Contact Us page is reachable via the Home, About, and Our Services page. Logged-in users and also guests have access to the Contact Us page, so the users don't need to register to send us a message. 
+- The contact form includes these fields; name, email, message. 
+- The form is submitted via Send button at the bottom of the form.
+- After submitting the form successfully, an alert message is displayed on the screen giving the user feedback about their sent message.
+    
+
+<details>
+
+<summary>Click to view screenshots of the Contact Us Page</summary>
+
+**Contact Us page**
+
+![Contact Us page](/documentation/contactus.png)
+
+**Contact Us Message**
+
+![Contact Us Message](/documentation/contact_message.png)
+
+</details>
+
+<br>
 
 ### Login
 
