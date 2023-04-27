@@ -17,6 +17,10 @@ The business offers its customers an easy way to access its services through an 
     * [Color Scheme](#color-scheme)
     * [Typography](#typography)
     * [Icons](#icons)
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Future Features](#future-features)
+* [Technologies and Tools Used](#technologies-and-tools-used)
 
 # Entity Relationship Model
 Before beginning this project, I researched the data models necessary to construct the desired application. This research included defining the entities and the relationships between them, creating a comprehensive list of fields and data points, and outlining the necessary actions for the application to function correctly. With this information in hand, I was able to construct the necessary models for the project and ensure that the application would be able to meet its goals.
@@ -359,7 +363,7 @@ The logged-in users can end their session and logout/signout.
 
 ### Profile/My Bookings
 The website gives the user the functionality to create, view, update, and delete bookings. All bookings are listed on the My Bookings page.
-- The user must be logged in to access the My Bookings page on the navigation bar.
+- The user must be logged-in to access the My Bookings page on the navigation bar.
 - A logged-in user who has not yet created a booking will have a message with information to add a booking.
 - When a user book a service, his request is still pending, so he can still update or delete his booking.
 - Admin-approved bookings cant be updated or deleted by users.
@@ -380,21 +384,117 @@ The website gives the user the functionality to create, view, update, and delete
 
 <br>
 
-### Update Booking
+### Update and Delete Bookings
+The website gives the user the functionality to update bookings via the Update button on the Booking Detail Card, and also to delete bookings via the Delete button.
+- The user must be logged in to access the My Bookings page and to update or delete the booking.
+- When the user clicks on the update button from the pending booking, they will be redirected to the update form where they can update their details. By clicking save, their booking will be updated and redirected to the My Bookings page.
+- After submitting the update form successfully, an alert message is displayed on the screen giving the user feedback about their updated booking.
+- When the user clicks on the delete button from the pending booking, they will be redirected to the delete booking page where they will be asked if they really want to delete their booking. By clicking delete, their booking will be deleted, or by clicking cancel they will be redirected to the My Bookings page.
+- After submitting the delete option, an alert message is displayed on the screen giving the user feedback about their deleted booking.
 
-### Delete Bookings
+<details>
+
+<summary>Click to view screenshots</summary>
+
+**Update Booking**
+
+![Update Booking](/documentation/updatebooking.png)
+
+**Update Booking Message**
+
+![Update Booking Message](/documentation/updatebooking_message.png)
+
+**Delete Booking**
+
+![Delete Booking](/documentation/deletebooking.png)
+
+**Delete Booking Message**
+
+![Delete Booking Message](/documentation/delete_message.png)
+
+</details>
+
+<br>
 
 ### Admin Panel
+The website offers the business owner the ability to view and interact with the database using a web-based Django Admin panel.
+- The Admin panel is reachable by typing /admin/ at the end of the website's URL in the URL bar.
+- The user is brought to the Django Administration Login Page, where they are required to enter their Username and Password in order to gain access. Superuser status is required to log in.
+- The Superuser has the capability to control all aspects of the system, including creating, modifying, deleting, and viewing.
+- The project models can be viewed in the Admin panel, they are listed in the booking (Booking models, Custom models).
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+**Admin login**
+
+![Admin Login](/documentation/adminlogin.png)
+
+**Admin Booking model**
+
+![Admin Booking model](/documentation/djangoadmin1.png)
+
+**Admin Contact model**
+
+![Admin Contact model](/documentation/djangoadmin2.png)
+
+</details>
+
+<br>
 
 ## Future Features
+- Time field for service bookings, currently the user can choose just a date.
+- To archive the finished bookings.
+- Email or phone verification.
+- Reset/Forgot password functionality.
+- User review page.
 
-### Technologies Used
+# Technologies and Tools Used
+- HTML5 - The structure and content of the website.
+- CSS3 - The styling for the website.
+- Python - The functionality of the website.
+- Django - Python Web Framework.
+- Django Allauth - Integrated set of Django applications addressing authentication, registration, account management
+- Crispy Forms - Helps to render Django forms in a nicer way.
+- Bootstrap - Front end development framework.
+- GitPod - Used to create and edit the website.
+- GitHub - Cloud based git repository used.
+- GitBash - Terminal used to push changes to the GitHub repository.
+- Cloudinary - Used to host all static files and images.
+- Heroku - Used to deploy the website.
+- Google Chrome DevTools - Test responsiveness and debug.
+- Balsamiq - Used to create the wireframes for the project.
+- W3C Validator - Used to validate HTML code.
+- W3C CSS Validator - A validator which checks the validity of CSS code.
+- CI Python Linter - Used to validate Python code.
+- ElephantSQL - PostgreSQL database hosting service.
+- Google Fonts - Fonts
+- Font Awesome - Icons
+- Color Space - Colour Palette Generator
+- Pexels - Stock photos
+- Unsplash - Stock photos
+- Multi Device Website Mockup Generator - For responsive visuals of the website
+- Favicon - for favicon
 
-## Languages
-
-## Libraries & Frameworks
-
-## Tools
+## Libraries
+The following libraries and modules are used in the project and they are located in requirements.txt file.
+- asgiref==3.6.0
+- cloudinary==1.32.0
+- crispy-bootstrap4==2022.1
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==3.2.18
+- django-allauth==0.54.0
+- django-crispy-forms==2.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- psycopg2==2.9.6
+- PyJWT==2.6.0
+- python3-openid==3.2.0
+- pytz==2023.3
+- requests-oauthlib==1.3.1
+- sqlparse==0.4.3
 
 # Testing
 
