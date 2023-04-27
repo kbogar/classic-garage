@@ -451,31 +451,31 @@ The website offers the business owner the ability to view and interact with the 
 - User review page.
 
 # Technologies and Tools Used
-- HTML5 - The structure and content of the website.
-- CSS3 - The styling for the website.
-- Python - The functionality of the website.
-- Django - Python Web Framework.
-- Django Allauth - Integrated set of Django applications addressing authentication, registration, account management
-- Crispy Forms - Helps to render Django forms in a nicer way.
-- Bootstrap - Front end development framework.
-- GitPod - Used to create and edit the website.
-- GitHub - Cloud based git repository used.
-- GitBash - Terminal used to push changes to the GitHub repository.
-- Cloudinary - Used to host all static files and images.
-- Heroku - Used to deploy the website.
-- Google Chrome DevTools - Test responsiveness and debug.
-- Balsamiq - Used to create the wireframes for the project.
-- W3C Validator - Used to validate HTML code.
-- W3C CSS Validator - A validator which checks the validity of CSS code.
-- CI Python Linter - Used to validate Python code.
-- ElephantSQL - PostgreSQL database hosting service.
-- Google Fonts - Fonts
-- Font Awesome - Icons
-- Color Space - Colour Palette Generator
-- Pexels - Stock photos
-- Unsplash - Stock photos
-- Multi Device Website Mockup Generator - For responsive visuals of the website
-- Favicon - for favicon
+- [HTML5](https://www.w3schools.com/html/) - The structure and content of the website.
+- [CSS3](https://www.w3schools.com/css/css_intro.asp) - The styling for the website.
+- [Python](https://www.python.org/) - The functionality of the website.
+- [Django](https://www.djangoproject.com/) - Python Web Framework.
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, account management
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Helps to render Django forms in a nicer way.
+- [Bootstrap](https://getbootstrap.com/) - Front end development framework.
+- [GitPod](https://www.gitpod.io/) - Used to create and edit the website.
+- [GitHub](https://github.com/) - Cloud based git repository used.
+- [GitBash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) - Terminal used to push changes to the GitHub repository.
+- [Cloudinary](https://cloudinary.com/) - Used to host all static files and images.
+- [Heroku](https://www.heroku.com) - Used to deploy the website.
+- [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Test responsiveness and debug.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Used to create the wireframes for the project.
+- [W3C Validator](https://validator.w3.org/) - Used to validate HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - A validator which checks the validity of CSS code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate Python code.
+- [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database hosting service.
+- [Google Fonts](https://fonts.google.com/) - Fonts
+- [Font Awesome](https://fontawesome.com/) - Icons
+- [Color Space](https://mycolor.space/) - Colour Palette Generator
+- [Pexels](https://www.pexels.com/) - Stock photos
+- [Unsplash](https://unsplash.com/) - Stock photos
+- [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) - For responsive visuals of the website
+- [Favicon](https://www.favicon.cc/) - for favicon
 
 ## Libraries
 The following libraries and modules are used in the project and they are located in requirements.txt file.
@@ -497,6 +497,7 @@ The following libraries and modules are used in the project and they are located
 - sqlparse==0.4.3
 
 # Testing
+All testing information can be found in TESTING.md.
 
 ## Bugs
 
