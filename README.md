@@ -21,6 +21,7 @@ The business offers its customers an easy way to access its services through an 
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
 * [Technologies and Tools Used](#technologies-and-tools-used)
+* [Testing](#testing)
 
 # Entity Relationship Model
 Before beginning this project, I researched the data models necessary to construct the desired application. This research included defining the entities and the relationships between them, creating a comprehensive list of fields and data points, and outlining the necessary actions for the application to function correctly. With this information in hand, I was able to construct the necessary models for the project and ensure that the application would be able to meet its goals.
@@ -497,11 +498,34 @@ The following libraries and modules are used in the project and they are located
 - sqlparse==0.4.3
 
 # Testing
-All testing information can be found in TESTING.md.
+All testing information can be found in [TESTING.md](https://github.com/kbogar/classic-garage/blob/main/TESTING.md)
 
-## Bugs
+# Bugs
+## Solved
+- There was an issue at the final Heroku deployment, there was an error and could not deploy, because I forgot to add crispy-bootstrap4 to requirements.txt. When I added later it was deployed with no problems.
+
+## Unsolved
 
 # Deployment
+This project is deployed using [Heroku](https://www.heroku.com).
+- Before deployment I created a env.py file in Gitpod. This file contains all the sensitive information that we must not push to Github. So I added env.py to .gitignore file.
+- Created a requirements.txt containing the necessary libraries and modules for the app to run properly.
+- Also created Procfile, this tells Heroku how to run this project.
+
+The steps for deploying through [Heroku](https://www.heroku.com) are as follows:
+- Go to [Heroku](https://www.heroku.com) website and log in.
+- Go to Dashboard, click on 'New' and 'Create New App'.
+- Add name for your app and choose region.
+- Then click 'Create app'.
+- Navigate to 'Deploy' tab and choose 'Connect to Github'.
+- Search for your repository that you want to deploy.
+- Click 'Connect'.
+- You can choose if you want manual or automatic deployment.
+- Choose Main Branch and click 'Deploy Branch'.
+- When the deployment is succesfully finished, go to Settings tab.
+- Click on 'Reveal Config Vars'.
+- Add the necessary variables.
+- Click 'Open app'.
 
 ## Forking the GitHub Repository
 
