@@ -3,7 +3,8 @@ Classic Garage is a full-stack, responsive, mobile-first website built for ficti
 
 The business offers its customers an easy way to access its services through an online booking system. Users can create an account, view, edit, and delete bookings, and learn more about the business and its services.
 
-[Link to the website](https://classic-garage.herokuapp.com/)
+- [Link to the website](https://classic-garage.herokuapp.com/)
+- [Git Repository](https://github.com/kbogar/classic-garage)
 
 ![](/documentation/mockup.png)
 
@@ -22,6 +23,9 @@ The business offers its customers an easy way to access its services through an 
     * [Future Features](#future-features)
 * [Technologies and Tools Used](#technologies-and-tools-used)
 * [Testing](#testing)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
 # Entity Relationship Model
 Before beginning this project, I researched the data models necessary to construct the desired application. This research included defining the entities and the relationships between them, creating a comprehensive list of fields and data points, and outlining the necessary actions for the application to function correctly. With this information in hand, I was able to construct the necessary models for the project and ensure that the application would be able to meet its goals.
@@ -450,6 +454,9 @@ The website offers the business owner the ability to view and interact with the 
 - Email or phone verification.
 - Reset/Forgot password functionality.
 - User review page.
+- When the registered user creates a booking, the name and the email field should be automatically populated.
+
+[Back to top](#table-of-contents)
 
 # Technologies and Tools Used
 - [HTML5](https://www.w3schools.com/html/) - The structure and content of the website.
@@ -497,40 +504,131 @@ The following libraries and modules are used in the project and they are located
 - requests-oauthlib==1.3.1
 - sqlparse==0.4.3
 
+[Back to top](#table-of-contents)
+
 # Testing
 All testing information can be found in [TESTING.md](https://github.com/kbogar/classic-garage/blob/main/TESTING.md)
 
 # Bugs
+I encountered a few errors during the coding of my project and there were fixed throughout the development.
 ## Solved
-- There was an issue at the final Heroku deployment, there was an error and could not deploy, because I forgot to add crispy-bootstrap4 to requirements.txt. When I added later it was deployed with no problems.
+- Trailing whitespace errors and line too-long errors in Python code.
+- On Contact page html had a bad value for attribute on form element. I cleared the action attribute to fix the issue.
+- I had an issue when I changed one of my model fields and tried to migrate the database again, it didn't work. It had to delete some of the migration folders and the database on ElephantSQL to fix the problem.
+- There was an issue at the final Heroku deployment, there was an error, and I could not deploy, because I forgot to add crispy-bootstrap4 to requirements.txt. When I added it later it was deployed with no problems.
 
 ## Unsolved
+At the moment there are no known bugs left to solve.
 
 # Deployment
 This project is deployed using [Heroku](https://www.heroku.com).
 - Before deployment I created a env.py file in Gitpod. This file contains all the sensitive information that we must not push to Github. So I added env.py to .gitignore file.
+- Modify settings.py to make django project aware of the env.py file.
 - Created a requirements.txt containing the necessary libraries and modules for the app to run properly.
 - Also created Procfile, this tells Heroku how to run this project.
 
-The steps for deploying through [Heroku](https://www.heroku.com) are as follows:
-- Go to [Heroku](https://www.heroku.com) website and log in.
+The steps for deploying through Heroku are as follows:
+- Go to Heroku website and log in.
 - Go to Dashboard, click on 'New' and 'Create New App'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/documentation/heroku1.png)
+
+</details>
+
+<br>
+
 - Add name for your app and choose region.
 - Then click 'Create app'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/documentation/heroku2.png)
+
+</details>
+
+<br>
+
 - Navigate to 'Deploy' tab and choose 'Connect to Github'.
 - Search for your repository that you want to deploy.
 - Click 'Connect'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/documentation/heroku3.png)
+
+</details>
+
+<br>
+
 - You can choose if you want manual or automatic deployment.
 - Choose Main Branch and click 'Deploy Branch'.
+
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/documentation/heroku4.png)
+
+</details>
+
+<br>
+
 - When the deployment is succesfully finished, go to Settings tab.
 - Click on 'Reveal Config Vars'.
-- Add the necessary variables.
+- Add the necessary variables; `CLOUDINARY_URL`, `DATABASE_URL`, `PORT`, `SECRET_KEY`.
 - Click 'Open app'.
 
+<details>
+
+<summary>Click to view screenshots</summary>
+
+![](/documentation/heroku5.png)
+
+</details>
+
+<br>
+
 ## Forking the GitHub Repository
+Forking allows you to view and edit the code without affecting the original repository.
+- Navigate to GitHub repository.
+- Click on 'Fork' in the top right corner.
+- This will take you to your own repository to fork with the same name as the original branch.
 
 ## Creating Local Clone
+Steps to create a local clone:
+- Click on the code tab under the repository name.
+- Then click 'Code' button to the right above the files listed.
+- Click on clipboard icon to copy the URL.
+
+[Back to top](#table-of-contents)
 
 # Credits
+## Content
+- [W3CSchool](https://www.w3schools.com/) for general and helpful tips for Bootstrap and Django.
+- [Stack Overflow](https://stackoverflow.com/) when I was stucked and needed help with code.
+- [Devpractical](https://devpractical.com/bootstrap-sticky-footer/) on how to create sticky footer in Bootstrap.
+- [Bootstrap Documentation](https://getbootstrap.com/) for general tips and setup.
+- [Django](https://www.djangoproject.com/) for general tips and how to.
+- 'I Think Therefore I am Blog' walkthrough project on how to setup the whole code environment, models, views, forms, etc.
+- [Very Academy](https://www.youtube.com/watch?v=GxA2I-n8NR8&list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT) learn Django Class based views tutorial.
+- [Selmi Tech](https://www.youtube.com/watch?v=3_3q_dE4_qs) build a doctor apointment booking system tutorial.
+- [Slack](https://slack.com/) for any issues and questions.
 
+## Media
+- [Free Logo Maker](https://www.freelogodesign.org/) for making the logo of the website.
+- [Pexels](https://www.pexels.com/) - Stock photos.
+- [Unsplash](https://unsplash.com/) - Stock photos.
 # Acknowledgements
+- This project was built as a part of the Full Stack Software Development education at [Code Institute](https://codeinstitute.net/).
+- My mentor Spencer Barriball for the guidance and encouragement.
+- My Wifi thank you for all the support.
+
+[Back to top](#table-of-contents)
