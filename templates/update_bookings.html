@@ -8,18 +8,31 @@
 <!-- update booking form -->
 <div class="jumbotron jumbotron-fluid info-container">
     <div class="container">
+        <!-- Checks if the user has access to the form  -->
+        {% if user.is_authenticated %}
         <h1>Update your booking details</h1>
         <i class="fa-solid fa-screwdriver-wrench"></i>
         <div class="col-10 offset-1 col-md-8 offset-md-2 mt-3 p-3">
-            
+
             <form method="POST" class="text-center">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn btn-lg btn-success mt-3" type="submit" value="Update">Save</button>
             </form>
+            {% else %}
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <h2 class="card-title">Please...</h2>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <p class="card-text">To update a booking you need to have an account. Create an account or login to
+                        existing account with the buttons below.</p>
+                    <a href="{% url 'account_signup' %}" class="btn btn-lg btn-success mt-3">Register</a>
+                    <a href="{% url 'account_login' %}" class="btn btn-lg btn-success mt-3">Login</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
-
 
 {% endblock %}
