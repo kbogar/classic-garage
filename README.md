@@ -516,6 +516,7 @@ I encountered a few errors during the coding of my project and there were fixed 
 - On Contact page html had a bad value for attribute on form element. I cleared the action attribute to fix the issue.
 - I had an issue when I changed one of my model fields and tried to migrate the database again, it didn't work. It had to delete some of the migration folders and the database on ElephantSQL to fix the problem.
 - There was an issue at the final Heroku deployment, there was an error, and I could not deploy, because I forgot to add crispy-bootstrap4 to requirements.txt. When I added it later it was deployed with no problems.
+- Non-logged-in users can access restricted content and functionality either through on-screen elements or direct entry of the URL. This issue was on update and delete bookings page. I added an if/else statement to fix this issue, so just a logged in user has access to these pages, else they need to log in first.
 
 ## Unsolved
 At the moment there are no known bugs left to solve.
